@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('./partials/navbar') %>
+    <h1>Add new Clothes</h1>
+
+    <form action="/clothes" method="post">
+      <label for="type">Type:</label>
+      <input name="type" id="type" type="text" />
+
+      <label for="isItClean">Is it Clean?</label>
+      <input name="isItClean" id="isItClean" type="checkbox" />
+
+      <button>Add Clothes</button>
+    </form>
+  </body>
+</html>

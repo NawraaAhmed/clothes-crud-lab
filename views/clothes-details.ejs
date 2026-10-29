@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Clothes Details</h1>
+    <p>Type: <%= clothes.type %></p>
+
+    <% if(clothes.isItClean){ %>
+        <p>Fresh and clean! ✨</p>
+    <% } else { %>
+        <p>Dirty, needs washing 🧼</p>
+    <% } %>
+
+    <form action="/clothes/<%= clothes._id %>?_method=DELETE" method="post">
+        <button>Delete Clothes</button>
+    </form>
+
+    <a href="/clothes/<%= clothes._id %>/edit">Edit Clothes</a>
+
+</body>
+</html>

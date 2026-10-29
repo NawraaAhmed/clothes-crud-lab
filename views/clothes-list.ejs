@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/navbar') %>
+    <h1>All Clothes</h1>
+
+    <% if(clothes.length === 0) { %>
+        <p>No Clothes to show yet. Come Back Later</p>
+        <a href="/clothes/new">Donate your Clothes here</a>
+    <% } %>
+
+    <% for(let oneClothes of clothes){ %>
+        <p>Type: <%= oneClothes.type%></p>
+        <a href="/clothes/<%= oneClothes._id%>">See Clothes Details</a>
+    <% } %>
+</body>
+</html>

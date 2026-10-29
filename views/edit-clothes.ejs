@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit Clothes</h1>
+
+    <form action="/clothes/<%=clothes._id %>?_method=PUT" method="post">
+        <label for="type">Type:</label>
+        <input value="<%=clothes.type %>" name="type" id="type" type="text">
+
+        <label for="isItClean">Is It Clean?</label>
+        <input <% if(clothes.isItClean){ %> checked <% } %> name="isItClean" id="isItClean" type="checkbox">
+
+        <button>Update Clothes</button>
+    </form>
+</body>
+</html>
